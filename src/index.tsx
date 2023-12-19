@@ -41,12 +41,11 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
       <ThemeProvider>
         <WagmiConfig config={config}>
           <App />
         </WagmiConfig>
-      </ThemeProvider></BrowserRouter>
+      </ThemeProvider>
   </React.StrictMode>
 );
 
