@@ -8,7 +8,7 @@ import {
 } from "@material-tailwind/react";
 import { useAccount, useConnect, useDisconnect } from 'wagmi'
 import { InjectedConnector } from 'wagmi/connectors/injected'
-
+import clsx from 'clsx';
 
 
 function App() {
@@ -39,7 +39,7 @@ function App() {
         <Typography variant="h6">
           {address}
         </Typography>
-        <Button className='mt-5 min-w-[200px]' color='blue' placeholder={'sample'} onClick={onConnectWallet}>
+        <Button className={clsx('mt-5 bg-amber-800', ' min-w-[200px]')} color='orange' placeholder={'sample'} onClick={onConnectWallet}>
           {isConnected ? "Disconnect Wallet" : "Connect Wallet"}
         </Button>
       </header>
